@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .tab-container{
+            max-width:960px;
+            margin: 0 auto;
+        }
+        header,nav,footer{
+            height: 100px;
+            background-color: gray;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            color: black;
+            margin-bottom:10px;
+        }
+        .img img{
+            /* width:100%; */
+            background-image: url("../image/05.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 56%;
+        }
+        article{
+            float: left;
+            height:300px;
+            background-color: red;
+            width:60%
+        }
+        aside{
+            width:35%;
+            float: right;
+            height: 300px;
+            background-color: blue;
+        }
+        article,aside{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            margin-bottom: 10px;
+        }
+        .clearfix::after(){
+            content:"";
+            display: block;
+            clear:both;
+        }
+        @media (max-width:600px){
+            article,aside{
+                width:100%;
+            }
+            article{
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>页头</header>
+    <nav>导航</nav>
+    <div class="img">
+        <img src="../image/05.jpg" alt="">
+    </div>
+    <div class="content clearfix">
+        <article>
+            <p>jfklajs;jjasdgj;aj;gj;fjgjalsglhajshdghas</p>
+        </article>
+        <aside>
+            <p>jfklajs;jjasdgj;aj;gj;fjgjalsglhajshdghas</p>
+        </aside>
+    </div>
+    <footer>页脚</footer>
+</body>
+</html>
